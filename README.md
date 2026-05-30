@@ -35,7 +35,7 @@ This repository contains the completed version of the game covered throughout th
 | Action | Key               |
 | ------ | ----------------- |
 | Move   | WASD / Arrow Keys |
-| Shoot  | Space             |
+| Shoot  | Left Mouse Button |
 
 ---
 
