@@ -1,24 +1,23 @@
-# Meteor Rush — Skeleton Project
+# Meteor Rush
 
-Skeleton project for the Module 3 arcade shooter game built in Unity. In this module, you will create a complete 2D shooter with player movement, shooting, enemies, meteors, health, score, and game over logic.
+Complete project for the Module 3 arcade shooter game built in Unity.
 
-This repository contains the starting files and assets used throughout the lectures. The gameplay systems are intentionally incomplete so you can build them step-by-step during the module.
+In this module, you build a complete 2D arcade shooter featuring player movement, projectile-based combat, enemy spawning, enemy attacks, collision detection, and sound effects.
+
+This repository contains the completed version of the game covered throughout the module.
 
 ---
 
-## Features You Will Build
+## Features
 
-- Player ship movement
-- Player shooting system
-- Enemy ship behavior
-- Enemy shooting system
-- Meteor hazards
-- Projectile collisions
-- Health system
-- Score system
-- Sound effects
-- Game over and restart logic
-- Complete arcade gameplay loop
+* Player movement system
+* Player shooting system
+* Enemy spawning system
+* Enemy movement patterns
+* Enemy shooting system
+* Projectile collision detection
+* Sound effects
+* Complete arcade gameplay loop
 
 ---
 
@@ -27,37 +26,36 @@ This repository contains the starting files and assets used throughout the lectu
 1. Clone or download this repository.
 2. Open the project using Unity Hub.
 3. Open the `Scenes` folder.
-4. Run `SampleScene` to start the project.
+4. Run `SampleScene` to play the game.
 
 ---
 
 ## Controls
 
-| Action | Key |
-|---|---|
-| Move Left | A / Left Arrow |
-| Move Right | D / Right Arrow |
-| Shoot | Space |
+| Action | Key               |
+| ------ | ----------------- |
+| Move   | WASD / Arrow Keys |
+| Shoot  | Space             |
 
 ---
 
 ## Folder Structure
 
-| Folder | Purpose |
-|---|---|
-| Audio | Sound effects used throughout the game |
-| Prefabs | Reusable game objects |
-| Scenes | Unity scenes |
-| Scripts | Gameplay scripts |
-| Settings | Unity project settings |
-| Sprites | Player, enemy, missile, meteor, and background sprites |
+| Folder   | Purpose                                           |
+| -------- | ------------------------------------------------- |
+| Audio    | Sound effects used throughout the game            |
+| Scenes   | Unity scenes                                      |
+| Scripts  | Gameplay scripts                                  |
+| Settings | Unity project settings                            |
+| Sprites  | Player, enemy, projectile, and background sprites |
 
 ---
 
 ## Assets
 
-This project uses assets from the Kenney Space Shooter Extension pack.
+This project uses assets from Kenney.
 
-Kenney Assets:  
-- https://kenney.nl/assets/space-shooter-extension
-- https://kenney.nl/assets/sci-fi-sounds
+Kenney Assets:
+
+* https://kenney.nl/assets/space-shooter-extension
+* https://kenney.nl/assets/sci-fi-sounds
