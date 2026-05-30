@@ -46,7 +46,6 @@ This repository contains the completed version of the game covered throughout th
 | Audio    | Sound effects used throughout the game            |
 | Scenes   | Unity scenes                                      |
 | Scripts  | Gameplay scripts                                  |
-| Settings | Unity project settings                            |
 | Sprites  | Player, enemy, projectile, and background sprites |
 
 ---
