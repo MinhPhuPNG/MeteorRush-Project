@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float speed = 10f; 
+    public float speed = 10f;
+    public AudioClip explosionSound; 
 
     void Update()
     {
@@ -18,6 +19,7 @@ public class Bullet : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
+            AudioSource.PlayClipAtPoint(explosionSound, other.transform.position);
             Destroy(other.gameObject);
             Destroy(gameObject);
         }

@@ -18,7 +18,11 @@ public class EnemyBullet : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Player Hit");
+            var pc = other.GetComponent<PlayerController>();
+            if (pc != null)
+            {
+                pc.TakeDamage(1);
+            }
 
             Destroy(gameObject);
         }
