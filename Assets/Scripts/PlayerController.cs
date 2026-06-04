@@ -16,16 +16,22 @@ public class PlayerController : MonoBehaviour
     private float nextFireTime = 0f;
     private Vector2 moveInput;
 
-    public AudioSource audioSource;
-    public AudioClip shootSound;    
-
     public void OnMove(InputValue value)
     {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
+        {
+            moveInput = Vector2.zero;
+            return;
+        }
+
         moveInput = value.Get<Vector2>();
     }
 
     public void OnAttack(InputValue value)
     {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
+            return;
+
         if (Time.time >= nextFireTime)
         {
             Shoot();
@@ -35,13 +41,14 @@ public class PlayerController : MonoBehaviour
 
     void Shoot()
     {
-        audioSource.PlayOneShot(shootSound);
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
-
     private void Update()
     {
+        if (GameManager.Instance != null && GameManager.Instance.IsGameOver)
+            return;
+
         Vector3 movement = new Vector3(moveInput.x, moveInput.y, 0f);
         transform.position += movement * moveSpeed * Time.deltaTime;
         Vector3 pos = transform.position;
@@ -50,5 +57,16 @@ public class PlayerController : MonoBehaviour
         pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
+    }
+
+    public void TakeDamage(int amount = 1)
+    {
+        if (GameManager.Instance == null || GameManager.Instance.IsGameOver)
+            return;
+
+        for (int i = 0; i < amount; i++)
+        {
+            GameManager.Instance.RegisterPlayerHit();
+        }
     }
 }

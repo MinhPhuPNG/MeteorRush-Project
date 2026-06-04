@@ -50,4 +50,30 @@ public class Enemy : MonoBehaviour
         audioSource.PlayOneShot(shootSound);
         Instantiate(enemyBulletPrefab, enemyFirePoint.position, Quaternion.identity);
     }
+
+    void HandleBulletCollision(GameObject bulletObject)
+    {
+        Bullet bullet = bulletObject.GetComponent<Bullet>();
+        if (bullet == null)
+            return;
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.RegisterEnemyHit();
+        }
+
+        AudioSource.PlayClipAtPoint(bullet.explosionSound, transform.position);
+        Destroy(bulletObject);
+        Destroy(gameObject);
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        HandleBulletCollision(other.gameObject);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        HandleBulletCollision(collision.gameObject);
+    }
 }
