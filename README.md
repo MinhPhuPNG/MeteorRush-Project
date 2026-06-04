@@ -1,8 +1,8 @@
-# Meteor Rush — Skeleton Project
+# Meteor Rush Finished Project
 
-Skeleton project for the Module 3 arcade shooter game built in Unity. In this module, you will create a complete 2D shooter with player movement, shooting, enemies, meteors, health, score, and game over logic.
+Project for the Module 3 arcade shooter game built in Unity. In this module, you will create a complete 2D shooter with player movement, shooting, enemies, meteors, health, score, and game over logic.
 
-This repository contains the starting files and assets used throughout the lectures. The gameplay systems are intentionally incomplete so you can build them step-by-step during the module.
+This repository contains the starting files and assets used throughout the lectures. Gameplay systems were implemented.
 
 ---
 
@@ -38,6 +38,8 @@ This repository contains the starting files and assets used throughout the lectu
 | Move Left | A / Left Arrow |
 | Move Right | D / Right Arrow |
 | Shoot | Left Mouse Button |
+| Restart Game | Space |
+
 
 ---
 
